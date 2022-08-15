@@ -15,3 +15,16 @@ for (int i = 0; i < array.Length; i++)
     array[i] = myString;
 }
 Console.WriteLine("Ваш массив: [" + string.Join(", ", array) + "]");
+string[] FinalArray = new string[array.Length];
+void CheckArray(string[] array, string[] FinalArray)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            FinalArray[count] = array[i];
+            count++;
+        }
+    }
+}
