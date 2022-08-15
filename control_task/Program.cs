@@ -7,13 +7,7 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 Console.WriteLine("Напишите несколько любых слов или целых чисел через 'пробел' и нажмите 'Enter': ");
-string[] arr = Console.ReadLine().Split(' ');
-string[] array = new string[arr.Length];
-for (int i = 0; i < array.Length; i++)
-{
-    string myString = arr[i].Trim();
-    array[i] = myString;
-}
+string[] array = Console.ReadLine().Split(' ');
 Console.WriteLine("Ваш массив: [" + string.Join(", ", array) + "]");
 string[] FinalArray = new string[array.Length];
 void CheckArray(string[] array, string[] FinalArray)
