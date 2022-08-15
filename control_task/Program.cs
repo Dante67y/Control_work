@@ -30,9 +30,10 @@ void CheckArray(string[] array, string[] FinalArray)
 }
 void PrintArray(string[] FinalArray)
 {
+    Console.WriteLine("Конечный массив с введёнными Вами значеними до 3х символов: ");
     for (int i = 0; i < FinalArray.Length; i++)
     {
-        Console.Write("Введённые Вами значения до 3х символов: [" + string.Join(", ", FinalArray[i]) + "]");
+        Console.Write($"{FinalArray[i]} ");
     }
     Console.WriteLine();
 }
