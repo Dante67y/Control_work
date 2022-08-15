@@ -6,23 +6,12 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-int[,] CreateMatrix(int m, int n)
+Console.WriteLine("Напишите несколько любых слов или целых чисел через 'пробел' и нажмите 'Enter': ");
+string[] arr = Console.ReadLine().Split(' ');
+string[] array = new string[arr.Length];
+for (int i = 0; i < array.Length; i++)
 {
-    int[,] matrix = new int[m, n];
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            matrix[i, j] = new Random().Next(1, 2000);
-            Console.Write(matrix[i, j] + " \t");
-        }
-        Console.WriteLine();
-    }
-    return matrix;
+    string myString = arr[i].Trim();
+    array[i] = myString;
 }
-
-Console.Write("Введите количество строк в массиве: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество столбцов в массиве: ");
-int n = Convert.ToInt32(Console.ReadLine());
-CreateMatrix(m, n);
+Console.WriteLine("Ваш массив: [" + string.Join(", ", array) + "]");
